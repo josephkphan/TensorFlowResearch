@@ -1,6 +1,6 @@
 # Youtube NLP Example Notes
 
-Reference: [YouTube](https://www.youtube.com/watch?v=DDByc9LyMV8&index=27&list=PL9Hr9sNUjfsmEu1ZniY0XpHSzl5uihcXZ)
+Help Reference: [YouTube](https://www.youtube.com/watch?v=DDByc9LyMV8&index=27&list=PL9Hr9sNUjfsmEu1ZniY0XpHSzl5uihcXZ) by Magnus Erik Hvass Pedersen
 
 
 ### Flow 

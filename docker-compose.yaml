@@ -1,0 +1,9 @@
+version: '2'
+services:
+    tensorflow:
+      container_name: tensorflow
+      image: josephkphan/tensorflow-sentiment-analysis:latest
+      ports:
+          - "8888:8888"         # For Jupyter Notebooks (NOTE: Not turned on by entrypoint)
+          - "6006:6006"         # For Tensorboard (NOTE: Not turned on by entrypoint)
+      restart: always
