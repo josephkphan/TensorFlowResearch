@@ -57,9 +57,6 @@ def maybe_download_and_extract(url, download_dir):
                                                   filename=file_path,
                                                   reporthook=_print_download_progress)
 
-        print()
-        print("Download finished. Extracting files.")
-
         if file_path.endswith(".zip"):
             # Unpack the zip-file.
             zipfile.ZipFile(file=file_path, mode="r").extractall(download_dir)
@@ -67,6 +64,3 @@ def maybe_download_and_extract(url, download_dir):
             # Unpack the tar-ball.
             tarfile.open(name=file_path, mode="r:gz").extractall(download_dir)
 
-        print("Done.")
-    else:
-        print("Data has apparently already been downloaded and unpacked.")
