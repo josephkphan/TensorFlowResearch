@@ -151,7 +151,7 @@ def create_data_sets(reviews, num_reviews):
         "test_avg": (test_sum / testing_cutoff),
         "train_pos_count": train_pos_counter,
         "train_neg_count": train_neg_counter,
-        "train_avg": (train_sum / num_reviews - testing_cutoff)
+        "train_avg": (train_sum / (num_reviews - testing_cutoff))
     }
     write_statistics_json_file(args.dir + 'stats.json', statistics)
 

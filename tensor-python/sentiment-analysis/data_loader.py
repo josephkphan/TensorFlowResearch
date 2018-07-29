@@ -1,12 +1,11 @@
 #!/usr/local/bin/python3
 
 import os
-import download
 import glob
 
 
-data_dir = "data/IMDB/"
-data_url = "http://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz"
+data_dir = ""
+base_dir = ""
 
 def _read_text_file(path):
     """
@@ -22,14 +21,6 @@ def _read_text_file(path):
         text = " ".join(lines)
 
     return text
-
-def maybe_download_and_extract():
-    """
-    Download and extract the IMDB Review data-set if it doesn't already exist
-    in data_dir (set this variable first to the desired directory).
-    """
-
-    download.maybe_download_and_extract(url=data_url, download_dir=data_dir)
 
 def load_data(train=True):
     """
@@ -47,7 +38,8 @@ def load_data(train=True):
     train_test_path = "train" if train else "test"
 
     # Base-directory where the extracted data is located.
-    dir_base = os.path.join(data_dir, "aclImdb", train_test_path)
+    dir_base = os.path.join(data_dir, base_dir, train_test_path)
+    print (dir_base)
 
     # Filename-patterns for the data-files.
     path_pattern_pos = os.path.join(dir_base, "pos", "*.txt")
