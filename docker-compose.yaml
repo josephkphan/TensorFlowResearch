@@ -6,6 +6,6 @@ services:
       ports:
           - "8888:8888"         # For Jupyter Notebooks (NOTE: Not turned on by entrypoint)
           - "6006:6006"         # For Tensorboard (NOTE: Not turned on by entrypoint)
-    #   volumes:
-    #       - ~Desktop/SchoolWork/TensorFlowResearch/:/notebooks # Used for development to not have to keep rebuilding image
+      volumes:
+          - /Users/josephphan/Desktop/SchoolWork/TensorFlowResearch/:/notebooks # Used for development to not have to keep rebuilding image
       restart: always
